@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "416819483762",
+    "project_id": "ordermoph-android",
+    "storage_bucket": "ordermoph-android.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416819483762:android:224dbc6cd2c1793ba15eeb",
+        "android_client_info": {
+          "package_name": "com.example.ordermoph"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDOlu07W4CW4B0JW--T2ilNyCjmluVZIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

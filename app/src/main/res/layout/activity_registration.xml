@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ordermo"
+        android:textColor="#32CD32"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Create your account"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Fill in your details to get started"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvSelectedRole"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="You are registering as CUSTOMER"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_green_rounded" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Full Name"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_border_gray_rounded"
+        android:paddingHorizontal="16dp"
+        android:hint="Juan Dela Cruz"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Email"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_border_gray_rounded"
+        android:paddingHorizontal="16dp"
+        android:hint="juan@example.com"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Phone Number"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_border_gray_rounded"
+        android:paddingHorizontal="16dp"
+        android:hint="+63 912 345 6789"
+        android:inputType="phone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Address"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_border_gray_rounded"
+        android:paddingHorizontal="16dp"
+        android:hint="123 Main St, City"
+        android:inputType="textPostalAddress" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Role"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <RadioGroup
+        android:id="@+id/rgRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbCustomer"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/bg_role_selector"
+            android:gravity="center"
+            android:text="Customer"
+            android:checked="true"
+            android:textColor="@drawable/bg_role_text_selector"
+            android:padding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbMerchant"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp"
+            android:button="@null"
+            android:background="@drawable/bg_role_selector"
+            android:gravity="center"
+            android:text="Merchant"
+            android:textColor="@drawable/bg_role_text_selector"
+            android:padding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbRider"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/bg_role_selector"
+            android:gravity="center"
+            android:text="Rider"
+            android:textColor="@drawable/bg_role_text_selector"
+            android:padding="8dp" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layoutServiceArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service Area"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/rgServiceArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAreaZambales"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/bg_role_selector"
+                    android:gravity="center"
+                    android:text="Zambales"
+                    android:checked="true"
+                    android:textColor="@drawable/bg_role_text_selector"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/rbAreaBataan"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"
+                    android:button="@null"
+                    android:background="@drawable/bg_role_selector"
+                    android:gravity="center"
+                    android:text="Bataan"
+                    android:textColor="@drawable/bg_role_text_selector"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAreaBulacan"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/bg_role_selector"
+                    android:gravity="center"
+                    android:text="Bulacan"
+                    android:textColor="@drawable/bg_role_text_selector"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/rbAreaPampanga"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"
+                    android:button="@null"
+                    android:background="@drawable/bg_role_selector"
+                    android:gravity="center"
+                    android:text="Pampanga"
+                    android:textColor="@drawable/bg_role_text_selector"
+                    android:padding="6dp"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_green_rounded"
+        android:text="Confirm &amp; Continue"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>
+
+</ScrollView>

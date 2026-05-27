@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#32CD32" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your role to continue"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp">
+
+        <!-- Customer Section -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRoleCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_green_rounded"
+            android:text="Sign up as Customer"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Merchant Section -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRoleMerchant"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_black_rounded"
+            android:text="Sign up as Merchant"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvMerchantApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Want to sell? Apply as Merchant"
+            android:textColor="#32CD32"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Rider Section -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRoleRider"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_black_rounded"
+            android:text="Sign up as Rider"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvRiderApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Want to earn? Apply as Rider"
+            android:textColor="#32CD32"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>
