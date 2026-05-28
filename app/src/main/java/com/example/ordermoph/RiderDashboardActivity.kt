@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.ListView
 import android.widget.PopupMenu
 import android.widget.TextView
@@ -29,6 +30,14 @@ class RiderDashboardActivity : AppCompatActivity() {
         userId = intent.getStringExtra("USER_ID") ?: ""
         val serviceArea = intent.getStringExtra("SERVICE_AREA") ?: ""
         findViewById<TextView>(R.id.tvUserName).text = userName
+
+        val ivBg = findViewById<ImageView>(R.id.ivRiderBg)
+        when (serviceArea) {
+            "Zambales" -> ivBg.setImageResource(R.drawable.bg_green_rounded)
+            "Bataan" -> ivBg.setImageResource(R.drawable.bg_black_rounded)
+            "Bulacan" -> ivBg.setImageResource(R.drawable.bg_black_rounded)
+            "Pampanga" -> ivBg.setImageResource(R.drawable.bg_green_rounded)
+        }
 
         val userToggle = findViewById<View>(R.id.userToggle)
         userToggle.setOnClickListener { showSignOutMenu(it) }

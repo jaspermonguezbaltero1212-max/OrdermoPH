@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:layout_height="180dp">
+
+        <ImageView
+            android:id="@+id/ivLocationHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_green_rounded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:padding="24dp">
 
             <TextView
-                android:id="@+id/logoText"
+                android:id="@+id/tvRegionTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ordermo"
-                android:textColor="#32CD32"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_alignParentBottom="true"
+                android:text="Stores"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
 
             <LinearLayout
                 android:id="@+id/userToggle"
@@ -37,8 +50,8 @@
                     android:id="@+id/tvUserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#32CD32"
-                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -46,30 +59,26 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:text="▼"
-                    android:textColor="#32CD32"
+                    android:textColor="@android:color/white"
                     android:textSize="10sp" />
 
             </LinearLayout>
 
         </RelativeLayout>
+    </FrameLayout>
 
-        <TextView
-            android:id="@+id/tvRegionTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Stores"
-            android:textColor="@android:color/black"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select a store to view their menu"
             android:textColor="@android:color/darker_gray"
-            android:textSize="14sp"
-            android:layout_marginTop="4dp" />
+            android:textSize="16sp" />
 
         <ListView
             android:id="@+id/lvMerchants"
@@ -82,4 +91,4 @@
 
     </LinearLayout>
 
-</FrameLayout>
+</LinearLayout>

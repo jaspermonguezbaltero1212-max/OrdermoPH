@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.ListView
 import android.widget.PopupMenu
 import android.widget.TextView
@@ -20,6 +21,14 @@ class SubRegionActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.tvUserName).text = userName
         findViewById<TextView>(R.id.tvSubRegionTitle).text = "Towns in $province"
+
+        val ivHeader = findViewById<ImageView>(R.id.ivProvinceHeader)
+        when (province) {
+            "Zambales" -> ivHeader.setImageResource(R.drawable.bg_green_rounded)
+            "Bataan" -> ivHeader.setImageResource(R.drawable.bg_black_rounded)
+            "Bulacan" -> ivHeader.setImageResource(R.drawable.bg_black_rounded)
+            "Pampanga" -> ivHeader.setImageResource(R.drawable.bg_green_rounded)
+        }
 
         val userToggle = findViewById<View>(R.id.userToggle)
         userToggle.setOnClickListener { showSignOutMenu(it) }

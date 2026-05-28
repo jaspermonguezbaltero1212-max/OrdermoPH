@@ -20,10 +20,10 @@ class RegionActivity : AppCompatActivity() {
         val userToggle = findViewById<View>(R.id.userToggle)
         userToggle.setOnClickListener { showSignOutMenu(it) }
 
-        val btnZambales = findViewById<AppCompatButton>(R.id.btnRegionZambales)
-        val btnBataan = findViewById<AppCompatButton>(R.id.btnRegionBataan)
-        val btnBulacan = findViewById<AppCompatButton>(R.id.btnRegionBulacan)
-        val btnPampanga = findViewById<AppCompatButton>(R.id.btnRegionPampanga)
+        val btnZambales = findViewById<View>(R.id.btnRegionZambales)
+        val btnBataan = findViewById<View>(R.id.btnRegionBataan)
+        val btnBulacan = findViewById<View>(R.id.btnRegionBulacan)
+        val btnPampanga = findViewById<View>(R.id.btnRegionPampanga)
 
         btnZambales.setOnClickListener { navigateToSubRegion("Zambales") }
         btnBataan.setOnClickListener { navigateToSubRegion("Bataan") }

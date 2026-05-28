@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.ListView
 import android.widget.PopupMenu
 import android.widget.TextView
@@ -23,11 +24,19 @@ class LocationActivity : AppCompatActivity() {
 
         firestoreManager = FirestoreManager()
         val selectedPlace = intent.getStringExtra("SELECTED_PLACE") ?: ""
-        val selectedRegion = intent.getStringExtra("SELECTED_REGION") ?: ""
+        val selectedRegion = intent.getStringExtra("AREA") ?: "Zambales"
         val userName = intent.getStringExtra("USER_NAME") ?: "User"
 
         findViewById<TextView>(R.id.tvRegionTitle).text = "Stores in $selectedPlace"
         findViewById<TextView>(R.id.tvUserName).text = userName
+
+        val ivHeader = findViewById<ImageView>(R.id.ivLocationHeader)
+        when (selectedRegion) {
+            "Zambales" -> ivHeader.setImageResource(R.drawable.bg_green_rounded)
+            "Bataan" -> ivHeader.setImageResource(R.drawable.bg_black_rounded)
+            "Bulacan" -> ivHeader.setImageResource(R.drawable.bg_black_rounded)
+            "Pampanga" -> ivHeader.setImageResource(R.drawable.bg_green_rounded)
+        }
 
         val userToggle = findViewById<View>(R.id.userToggle)
         userToggle.setOnClickListener { showSignOutMenu(it) }
